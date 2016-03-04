@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root SYSTEM "example.dtd">
+<root>
+  <artikel id="artikel4">
+      <price>40</price>
+  </artikel>
+  <artikel id="artikel5">
+      <price>50</price>
+  </artikel>
+  <artikel id="artikel6">
+      <price>60</price>
+  </artikel>
+  <artikel id="artikel7">
+      <price>70</price>
+  </artikel>
+</root>

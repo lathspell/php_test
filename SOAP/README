@@ -1,0 +1,10 @@
+      $output = $voipWsClient->setSafariAWS(                                                                                                                
+                new SoapParam("$vorwahl", "prefix"),                                                                                                        
+                new SoapParam("$durchwahl", "nr"),                                                                                                          
+                new SoapParam("Safari_PK", "rnpName"),                                                                                                      
+                new SoapParam("$forward_type", "type"),                                                                                                     
+                new SoapParam("$forward_target", "target"));       
+
+Bevor Du Dich tot suchst, wenn Dein Gegenüber behauptet Du würdest ihm immer nur null als Funktionsparameter übergeben dann musst Du mittels SoapParam die richtigen Namen zu den Parametern schreiben. Gilt nur falls Du ohne WSDL arbeitest.
+
+

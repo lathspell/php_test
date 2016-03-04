@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="uri:lathspell" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="MyServer" targetNamespace="uri:lathspell">
+    <types>
+        <xsd:schema targetNamespace="uri:lathspell"/>
+    </types>
+    <portType name="MyServerPort">
+        <operation name="greeter">
+            <documentation>Liefert Begr&#xFC;&#xDF;ung.
+Docblocks werden f&#xFC;r die automatische WSDL Generierung benutzt!
+            </documentation>
+            <input message="tns:greeterIn"/>
+            <output message="tns:greeterOut"/>
+        </operation>
+        <operation name="kaputt">
+            <documentation>kaputt</documentation>
+            <input message="tns:kaputtIn"/>
+        </operation>
+    </portType>
+    <binding name="MyServerBinding" type="tns:MyServerPort">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="greeter">
+            <soap:operation soapAction="uri:lathspell#greeter"/>
+            <input>
+                <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="uri:lathspell"/>
+            </input>
+            <output>
+                <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="uri:lathspell"/>
+            </output>
+        </operation>
+        <operation name="kaputt">
+            <soap:operation soapAction="uri:lathspell#kaputt"/>
+            <input>
+                <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="uri:lathspell"/>
+            </input>
+            <output>
+                <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="uri:lathspell"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="MyServerService">
+        <port name="MyServerPort" binding="tns:MyServerBinding">
+            <soap:address location="uri:lathspell"/>
+        </port>
+    </service>
+    <message name="greeterIn">
+        <part name="name" type="xsd:string"/>
+    </message>
+    <message name="greeterOut">
+        <part name="return" type="xsd:string"/>
+    </message>
+    <message name="kaputtIn"/>
+</definitions>

@@ -1,0 +1,20 @@
+Preparing Selenium:
+* Download "Selenium Server" from http://seleniumhq.org/download/ to /opt/selenium/
+* cd /opt/selenium
+* mkdir firefoxProfiles/
+* cp ~/.mozilla/firefox/*default/cert* firefoxProfiles       # to automatically accept self signed certs
+* java -jar selenium-server-standalone-2.19.0.jar -firefoxProfileTemplate firefoxProfiles # should listen on :4444
+
+Prepare PHPUnit:
+* sudo pear install pear.phpunit.de/PHPUnit_Selenium
+
+Prepare Firefox (optional):
+* Install extensions "Selenium IDE" and "Firebug"
+
+Prepare Netbeans (optional):
+* Install extension "Selenium Module for PHP" and "Selenium Server"
+
+Run Tests:
+* phpunit --colors --debug --verbose web/Selenium/GoogleSearchTest.php
+
+

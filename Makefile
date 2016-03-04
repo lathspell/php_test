@@ -1,0 +1,2 @@
+test:
+	phpunit --colors . || true

@@ -1,0 +1,29 @@
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/example.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE root SYSTEM "example.dtd">
+
+    <root>
+    ...
+    </root>
+-->
+
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT root (artikel)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT artikel (price)*>
+<!ATTLIST artikel id ID #REQUIRED>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT price (#PCDATA)>
