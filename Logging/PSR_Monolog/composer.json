@@ -1,0 +1,14 @@
+{
+    "name": "vendor/psr-log-test",
+    "description": "Description of project psr_log_test.",
+    "authors": [
+        {
+            "name": "chammers",
+            "email": "your@email.here"
+        }
+    ],
+    "require": {
+        "psr/log": "^1.0",
+        "monolog/monolog": "^1.21"
+    }
+}
