@@ -1,0 +1,13 @@
+{
+    "name": "lathspell/php_test",
+    "description": "PHP Tests",
+    "require": {
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "authors": [
+        {
+            "name": "Christian Brunotte",
+            "email": "ch@lathspell.de"
+        }
+    ]
+}
