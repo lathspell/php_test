@@ -24,7 +24,12 @@ class Json_Test extends TestCase
 
         $serializer = new Serializer([new ObjectNormalizer()], [new JsonEncoder()]);
 
+        // Object to JSON
         $json = $serializer->serialize($person, "json");
         $this->assertEquals('{"firstName":"Tim","age":42}', $json);
+
+        // JSON to Object
+        $person2 = $serializer->deserialize($json, Person::class, 'json');
+        $this->assertEquals($person, $person2);
     }
 }
