@@ -12,4 +12,12 @@ class Date_Test extends PHPUnit_Framework_TestCase {
         $actual = date('d. M Y', strtotime('-5 days', strtotime('2016-11-21 14:23:22')));
         self::assertEquals("16. Nov 2016", $actual);
     }
+
+    public function test3()
+    {
+        $input = '2017-04-03 12:34:56';
+        $now = '2017-07-12 00:00:00';
+        self::assertTrue(strtotime($input) < strtotime('-60 days', strtotime($now)));
+        self::assertTrue(strtotime($input) < strtotime('-10 days', strtotime($now)));
+    }
 }
