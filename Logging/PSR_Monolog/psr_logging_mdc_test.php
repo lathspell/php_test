@@ -8,7 +8,7 @@ use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 
 $consoleHandler = new StreamHandler('php://stderr');
-$consoleHandler->setFormatter(new LineFormatter("[%datetime%] [MDC=%extra.my_mdc%] %channel%.%level_name%: %message%\n"));
+$consoleHandler->setFormatter(new LineFormatter("[%datetime%] [MDC=%extra.my_mdc%] %level_name% %channel%: %message%\n"));
 
 $mainLogger = new Logger("main");
 $mainLogger->pushProcessor(function (array $record) {
