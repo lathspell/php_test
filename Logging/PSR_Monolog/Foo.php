@@ -19,9 +19,4 @@ class Foo {
         $this->log->info("bar");
     }
 
-    public function useGlobalLog() {
-        global $log;
-        $myLog = $log->withName("Foo using Global");
-        $myLog->info("useGlobalLog");
-    }
 }
