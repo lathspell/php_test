@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/3.7/phpunit.xsd"
+    bootstrap="bootstrap.php" 
+    verbose="true"
+    colors="true">
+    
+    <logging>
+<!--        <log type="coverage-html" target="generated/coverage/"/> -->
+    </logging>
+
+    <!-- Statistiken ueber die Abdeckung von /usr/share/php/propel/ sind mir egal :) -->
+    <filter>
+        <whitelist>
+            <directory suffix=".php">lib/</directory>
+            <exclude>
+                <!-- <file>lib/Foo.php</file> -->
+            </exclude>
+        </whitelist>
+    </filter>
+
+</phpunit>
